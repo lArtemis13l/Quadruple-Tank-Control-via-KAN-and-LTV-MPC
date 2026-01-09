@@ -43,7 +43,7 @@ Given the aforementioned steps were verified, below is the guide to compile the 
 2. Scroll down and find any cell that has **"import serial"**, variables **"packer"** and **"unpacker"** defined, has **"dt_hil"** constant defined in it and a **"for k in range(steps)"** loop defined in **try-catch** block.
 3. Ensure your Nucleo motherboard is connected to your PC.
 4. Open file **`QT_HIL_Clean/Core/config.h`** and verify the setup (Minimum Phase or Non-Minimum Phase). 
-5. Open file **`QT_HIL_Clean/Core/main.c`** and debug it. Ensure the compiler is set to **"-Ofast"`** as given in the screenshot. ![Screenshot](IDE_screenshot.png).
+5. Open file **`QT_HIL_Clean/Core/main.c`** and debug it. Ensure the compiler is set to **"-Ofast"`** as given in the screenshot. ![Screenshot](IDE_screenshot.png)
 6. Comment out either **KAN Controller** or **MPC Controller** depending on what controller you want to test.
 7. Return to Jupyter Notebook and launch the cell you have chosen.
 8. Return to STM32CubeIDE (with **Alt+Tab** shortcut on Windows) and press F8 to resume the debugging process.
