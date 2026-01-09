@@ -30,23 +30,24 @@ This repository contains the source code and experimental data for benchmarking 
 ## Short guide on quick project launch
 All files are provided **as-is** and guaranteed to work, given correct settings are applied to the hardware.
 
-Before initializing the project, ensure that your STM32H7 connected properly and displayed as **NOD-H753ZI** as provided in the following ![screenshot](NOD_screenshot.png). 
+Before initializing the project, ensure that your STM32H7 connected properly and displayed as **NOD-H753ZI** as provided in the following screenshot. ![screenshot](NOD_screenshot.png) 
 
 Ensure all Python libraries that are used in Jupyter Notebooks are installed on your PC. Use *"pip install (name of the library)"* if library is absent.
 
-Additionally, use **Device Manager** to ensure that it is indeed communicating with port **COM5**. If port is different, change the code to implement the communication port that is displayed in **Device Manager**, not the other way around.
+Additionally, use **Device Manager** to ensure that it is indeed communicating with port **COM5**. If port is different, edit **SERIAL_PORT** in the cells containing this variable of the notebook to match your **Device Manager**.
 
 Given the aforementioned steps were verified, below is the guide to compile the given project.
 
 ## How to launch the project
-1. Open **`Diploma_Johansson_EKF_MPC_KAN/01_ProjectInitiatization_HILSim.ipynb`** and initialize cells 1 (Constant variables) and 2 (Nonlinear model calculations).
+1. Open **`Diploma_Johansson_EKF_MPC_KAN/01_ProjectInitiatization_HILSim.ipynb`** and initialize cells 1 (Constant variables) and 2 (Nonlinear model calculation).
 2. Scroll down and find any cell that has **"import serial"**, variables **"packer"** and **"unpacker"** defined, has **"dt_hil"** constant defined in it and a **"for k in range(steps)"** loop defined in **try-catch** block.
 3. Ensure your Nucleo motherboard is connected to your PC.
 4. Open file **`QT_HIL_Clean/Core/config.h`** and verify the setup (Minimum Phase or Non-Minimum Phase). 
-5. Open file **`QT_HIL_Clean/Core/main.c`** and debug it. Ensure the compiler is set to **"-Ofast"`** as given in the ![Screenshot](IDE_screenshot.png). Comment out either **KAN Controller** or **MPC Controller** depending on what controller you want to test.
-6. Return to Jupyter Notebook and launch the cell you have chosen.
-7. Return to STM32CubeIDE (with **Alt+Tab** shortcut on Windows) and press F8 to resume the debugging process.
-8. Return back to the Jupyter Notebook and wait for the simulation to finish. Matplotlib instance would generate the plot upon completion.
+5. Open file **`QT_HIL_Clean/Core/main.c`** and debug it. Ensure the compiler is set to **"-Ofast"`** as given in the screenshot. ![Screenshot](IDE_screenshot.png)
+6. Comment out either **KAN Controller** or **MPC Controller** depending on what controller you want to test.
+7. Return to Jupyter Notebook and launch the cell you have chosen.
+8. Return to STM32CubeIDE (with **Alt+Tab** shortcut on Windows) and press F8 to resume the debugging process.
+9. Return back to the Jupyter Notebook and wait for the simulation to finish. Matplotlib instance would generate the plot upon completion.
 
-Contact the repository author (**@lArtemis13l**) on socials or open a GitHub issue for questions regarding the code implementation.
+Contact the repository author (**@lArtemis13l**) on socials or open a GitHub issue for questions and issues regarding the code implementation.
 
