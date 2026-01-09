@@ -19,8 +19,8 @@ This repository contains the source code and experimental data for benchmarking 
 ## Results
 | Controller | Avg Latency | Worst-Case | CPU Load |
 |:----------:|:-----------:|:----------:|:--------:|
-| MPC (OSQP) | 19 ms       | 81 ms      | ~100%    |
-| Symbolic KAN| 1.0 µs     | 1.02 µs     | 0.033%    |
+| MPC (OSQP) | 19.981 ms       | 81.82 ms      | ~100%    |
+| Symbolic KAN| 1.04 µs     | 1.094 µs     | 0.033%    |
 
 ## Folder Structure
 - `Firmware/` (QT_HIL_Clean): C code for STM32 (System Workbench / CubeIDE).
