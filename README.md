@@ -39,7 +39,7 @@ Additionally, use **Device Manager** to ensure that it is indeed communicating w
 Given the aforementioned steps were verified, below is the guide to compile the given project.
 
 ## How to launch the project
-1. Open **`Diploma_Johansson_EKF_MPC_KAN/01_ProjectInitiatization_HILSim.ipynb`** and initialize cells 1 (Constant variables) and 2 (Nonlinear model calculations).
+1. Open **`Diploma_Johansson_EKF_MPC_KAN/01_ProjectInitiatization_HILSim.ipynb`** and initialize cells 1 (Constant variables) and 2 (Nonlinear model calculation).
 2. Scroll down and find any cell that has **"import serial"**, variables **"packer"** and **"unpacker"** defined, has **"dt_hil"** constant defined in it and a **"for k in range(steps)"** loop defined in **try-catch** block.
 3. Ensure your Nucleo motherboard is connected to your PC.
 4. Open file **`QT_HIL_Clean/Core/config.h`** and verify the setup (Minimum Phase or Non-Minimum Phase). 
@@ -49,5 +49,5 @@ Given the aforementioned steps were verified, below is the guide to compile the 
 8. Return to STM32CubeIDE (with **Alt+Tab** shortcut on Windows) and press F8 to resume the debugging process.
 9. Return back to the Jupyter Notebook and wait for the simulation to finish. Matplotlib instance would generate the plot upon completion.
 
-Contact the repository author (**@lArtemis13l**) on socials or open a GitHub issue for questions regarding the code implementation.
+Contact the repository author (**@lArtemis13l**) on socials or open a GitHub issue for questions and issues regarding the code implementation.
 
