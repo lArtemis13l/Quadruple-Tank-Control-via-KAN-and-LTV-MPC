@@ -7,7 +7,7 @@
 ## Overview
 This repository contains the source code and experimental data for benchmarking **Symbolic Kolmogorov-Arnold Networks (KAN)** against **LTV-MPC (Linear Time-Varying MPC)** on a Non-Minimum Phase Quad-Tank system.
 
-**Key Result:** KAN achieves a **~19500x speedup** average case (0.99µs vs 19.3ms) and **~80294x speedup** (1.02µs vs 81.9ms) worst-case while maintaining control stability under disturbance.
+**Key Result:** KAN achieves a **~19212x speedup** average case (1.02µs vs 19.981ms) and **~74790x speedup** (1.094µs vs 81.82ms) worst-case while maintaining control stability under disturbance.
 
 ## Hardware Setup
 ![Setup](setup_photo.jpg) 
@@ -30,7 +30,7 @@ This repository contains the source code and experimental data for benchmarking 
 ## Short guide on quick project launch
 All files are provided **as-is** and guaranteed to work, given correct settings are applied to the hardware.
 
-Before initializing the project, ensure that your STM32H7 connected properly and displayed as **NOD-H753ZI** as provided in the following screenshot. ![screenshot](NOD_screenshot.png) 
+Before initializing the project, ensure that your STM32H7 connected properly and displayed as **NOD-H753ZI** as provided in the following screenshot. ![screenshot](ScreenshotNOD.png) 
 
 Ensure all Python libraries that are used in Jupyter Notebooks are installed on your PC. Use **`"pip install -r requirements.txt"`** to install key dependent libraries.
 
@@ -43,7 +43,7 @@ Given the aforementioned steps were verified, below is the guide to compile the 
 2. Scroll down and find any cell that has **"import serial"**, variables **"packer"** and **"unpacker"** defined, has **"dt_hil"** constant defined in it and a **"for k in range(steps)"** loop defined in **try-catch** block.
 3. Ensure your Nucleo motherboard is connected to your PC.
 4. Open file **`QT_HIL_Clean/Core/config.h`** and verify the setup (Minimum Phase or Non-Minimum Phase). 
-5. Open file **`QT_HIL_Clean/Core/main.c`** and debug it. Ensure the compiler is set to **"-Ofast"`** as given in the screenshot. ![Screenshot](IDE_screenshot.png)
+5. Open file **`QT_HIL_Clean/Core/main.c`** and debug it. Ensure the compiler is set to **"-Ofast"`** as given in the screenshot. ![Screenshot](ScreenshotIDE.png)
 6. Comment out either **KAN Controller** or **MPC Controller** depending on what controller you want to test.
 7. Return to Jupyter Notebook and launch the cell you have chosen.
 8. Return to STM32CubeIDE (with **Alt+Tab** shortcut on Windows) and press F8 to resume the debugging process.
