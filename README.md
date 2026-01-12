@@ -30,7 +30,7 @@ This repository contains the source code and experimental data for benchmarking 
 ## Short guide on quick project launch
 All files are provided **as-is** and guaranteed to work, given correct settings are applied to the hardware.
 
-Before initializing the project, ensure that your STM32H7 connected properly and displayed as **NOD-H753ZI** as provided in the following screenshot. ![screenshot](ScreenshotNOD.png) 
+Before initializing the project, ensure that your STM32H7 had connected properly and is displayed as **NOD-H753ZI** as provided in the following screenshot. ![screenshot](ScreenshotNOD.png) 
 
 Ensure all Python libraries that are used in Jupyter Notebooks are installed on your PC. Use **`"pip install -r requirements.txt"`** to install key dependent libraries.
 
